@@ -1,7 +1,8 @@
-#pick a string as reference with min length
-#loop through based on the length of the min length string
-#compare the first character of all the strings
-#if all the character matches then add it to the longest string or return the value of longest string
+# 1. Find the shortest string to use as our bounds
+# 2. Iterate using enumerate to keep track of the index (i) and character (char)
+# 3. Compare with every string
+# 4. Return a slice of the string
+# 5. If we finish the loop, the entire shortest string is the prefix
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         shortest_str = min(strs, key=len)
